@@ -44,4 +44,18 @@ function multiply(a, b) {
 function voidReturn(message) {
     console.log(message);
 }
-console.log(multiply(5, 3));
+// console.log(multiply(5,3))
+// Making parameter optional with "?"
+// Optional parameter must be in the end of parameter list in function
+// function addAll(a:number,b:number,c?:number):number {
+//     if(typeof c !== 'undefined') {
+//         return a + b + c
+//     } 
+//     return a + b
+// }
+function addAll(a = 5, b, c) {
+    return a + b + c;
+}
+console.log(addAll(1, 2, 3));
+// When set default value to parameter, that parameter must be skipped with "undefined" in function call
+console.log(addAll(undefined, 2, 3));
