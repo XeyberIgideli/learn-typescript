@@ -37,3 +37,11 @@ let constant;
 let constantUnion;
 // let constantUnion: "Cucumber" // "constantUnion" accepts only one of three values
 // Functions
+function multiply(a, b) {
+    return a * b;
+}
+// use void when no need to return something
+function voidReturn(message) {
+    console.log(message);
+}
+console.log(multiply(5, 3));

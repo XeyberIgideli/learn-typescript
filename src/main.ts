@@ -2,7 +2,7 @@
 let d:any = 'hello' // Accept all types
 let a:number = 12
 let b:string = '4'
-let c : number | boolean // Union defining
+let c: number | boolean // Union defining
 
 function test(a:number,b:number) {
     console.log(a/b)
@@ -70,7 +70,15 @@ let constantUnion: "Banana" | "Apple" | "Kiwi"
 
 // Functions
 
+function multiply (a:number,b:number):number {
+    return a * b
+}
 
+// use void when no need to return something
+function voidReturn (message:any):void {
+    console.log(message)
+}
+console.log(multiply(5,3))
 
 
 
