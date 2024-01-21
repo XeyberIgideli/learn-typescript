@@ -5,10 +5,10 @@ let b:string = '4'
 let c: number | boolean // Union defining
 
 function test(a:number,b:number) {
-    console.log(a/b)
+    // console.log(a/b)
 }
 
-// Array and Objects 
+// Array 
 
 const arrString = ['test1','test2', 'test3'] // Only string
 
@@ -28,7 +28,6 @@ const arrTuple: [number,string,boolean] = [12345, "test", true] // Order is impo
 
 
 // Objects
-
 
 let Jimmy: {name:string,book:number,dead:boolean} = {
     name: "Jimmy",
@@ -59,7 +58,7 @@ function helloWriter (writer:Writer) {
     return writer.name
 }
 
-console.log(helloWriter(George))
+// console.log(helloWriter(George))
 
 // Literal types
 
@@ -76,7 +75,7 @@ function multiply (a:number,b:number):number {
 
 // use void when no need to return something
 function voidReturn (message:any):void {
-    console.log(message)
+    // console.log(message)
 }
 // console.log(multiply(5,3))
 
@@ -94,12 +93,35 @@ function addAll(a:number = 5,b:number,c:number):number {
     return a + b + c
 }
 
-console.log(addAll(1,2,3))
+// console.log(addAll(1,2,3))
 // When set default value to parameter, that parameter must be skipped with "undefined" in function call
-console.log(addAll(undefined,2,3))
+// console.log(addAll(undefined,2,3))
+
+// Rest parameters
+
+const sum = (...nums: number[]):number => {
+    return nums.reduce((prev,curr) => curr + prev)
+}
+
+// console.log(sum(1,2,3,4))
+
+// Type assertion or casting
+
+type One = string
+type Two = number | string
+type Three = "add"
 
 
+let r: One = 'Hello'
+let m = r as Two
+let p = m as Three
 
 
+let t = <One>'test'
+let y = <string>'test323' 
 
+const year = document.getElementById('year') as HTMLSpanElement
+const thisYear:string = new Date().getFullYear().toString()
+year.setAttribute('datetime', thisYear)
+year.textContent = thisYear
 

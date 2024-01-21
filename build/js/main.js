@@ -5,9 +5,9 @@ let a = 12;
 let b = '4';
 let c; // Union defining
 function test(a, b) {
-    console.log(a / b);
+    // console.log(a/b)
 }
-// Array and Objects 
+// Array 
 const arrString = ['test1', 'test2', 'test3']; // Only string
 const arrUnion = [12345, 'test4']; // String or number (union)
 const arrMixed = [12345, 'test', true]; // Mixed array
@@ -30,7 +30,7 @@ let George = {
 function helloWriter(writer) {
     return writer.name;
 }
-console.log(helloWriter(George));
+// console.log(helloWriter(George))
 // Literal types
 let constant;
 // constant = 'new value' // "constant" accepts only "only me accapted" string
@@ -42,7 +42,7 @@ function multiply(a, b) {
 }
 // use void when no need to return something
 function voidReturn(message) {
-    console.log(message);
+    // console.log(message)
 }
 // console.log(multiply(5,3))
 // Making parameter optional with "?"
@@ -56,6 +56,19 @@ function voidReturn(message) {
 function addAll(a = 5, b, c) {
     return a + b + c;
 }
-console.log(addAll(1, 2, 3));
+// console.log(addAll(1,2,3))
 // When set default value to parameter, that parameter must be skipped with "undefined" in function call
-console.log(addAll(undefined, 2, 3));
+// console.log(addAll(undefined,2,3))
+// Rest parameters
+const sum = (...nums) => {
+    return nums.reduce((prev, curr) => curr + prev);
+};
+let r = 'Hello';
+let m = r;
+let p = m;
+let t = 'test';
+let y = 'test323';
+const year = document.getElementById('year');
+const thisYear = new Date().getFullYear().toString();
+year.setAttribute('datetime', thisYear);
+year.textContent = thisYear;
